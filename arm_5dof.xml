@@ -1,0 +1,8 @@
+<Robot name="arm_5dof" file="arm_5dof_rounded.dae">
+  <Manipulator name="arm">
+    <base>base_link</base>
+    <effector>arm_link_4</effector>
+    <direction>1 0 0</direction>
+    <translation>0 0 0</translation>
+  </Manipulator>
+</Robot>

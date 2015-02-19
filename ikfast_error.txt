@@ -1,0 +1,72 @@
+
+
+python `openrave-config --python-dir`/openravepy/_openravepy_/ikfast.py --robot=arm_5dof_rounded.dae --iktype=translationdirection5d  --baselink=0 --eelink=5 --savefile=argo_arm.cpp
+
+
+[plugindatabase.h:929 _SysLoadLibrary] /usr/local/share/openrave-0.9/plugins/openravepy_configurationcache.so: libconfigurationcache.so: cannot open shared object file: No such file or directory
+[plugindatabase.h:857 _LoadPlugin] failed to load: /usr/local/share/openrave-0.9/plugins/openravepy_configurationcache.so
+[plugindatabase.h:577 Create] Failed to create name ode, interface collisionchecker
+[plugindatabase.h:577 Create] Failed to create name bullet, interface collisionchecker
+/usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_/ikfast.py:1437: RuntimeWarning: invalid value encountered in divide
+  axisangle /= angle
+INFO: moved translation [0, 0, 0] to right end
+INFO: moved translation [0, 0, 299/2000] to left end
+INFO: moved translation on intersecting axis [0, 0, 0] to left
+INFO: [[1, 0, 0, 0],[0, 1, 0, 0],[0, 0, 1, 299/2000]]
+INFO: [[cos(j0), -sin(j0), 0, 0],[sin(j0), cos(j0), 0, 0],[0, 0, 1, 0]]
+INFO: [[1, 0, 0, 0],[0, 0, 1, 0],[0, -1, 0, 0]]
+INFO: [[cos(j1), -sin(j1), 0, 0],[sin(j1), cos(j1), 0, 0],[0, 0, 1, 0]]
+INFO: [[1, 0, 0, 0],[0, 1, 0, -1377/2500],[0, 0, 1, 0]]
+INFO: [[cos(j2), -sin(j2), 0, 0],[sin(j2), cos(j2), 0, 0],[0, 0, 1, 0]]
+INFO: [[1, 0, 0, 13/1000],[0, 1, 0, -269/400],[0, 0, 1, 0]]
+INFO: [[cos(j3), -sin(j3), 0, 0],[sin(j3), cos(j3), 0, 0],[0, 0, 1, 0]]
+INFO: [[1, 0, 0, -7/125],[0, 0, -1, 0],[0, 1, 0, 589/10000]]
+INFO: [[cos(j4), -sin(j4), 0, 0],[sin(j4), cos(j4), 0, 0],[0, 0, 1, 0]]
+INFO: [[1, 0, 0, 0],[0, 1, 0, 0],[0, 0, 1, 0]]
+INFO: ikfast translation direction 5d: [j0, j1, j2, j3, j4], direction=[0]
+[0]
+[1]
+INFO: computed in 0.547656s
+INFO: attempting li/woernle/hiller general ik method
+WARNING: CannotSolveError: Li/Woernle/Hiller method requires 3 unknown variables, has 2
+INFO: computed in 1.223732s
+INFO: attempting li/woernle/hiller general ik method
+WARNING: could not find any variable where number of equations is exacty 8, trying all possibilities
+INFO: allowed indices: [0, 2, 4]
+WARNING: allowedindex 0 found 0 equations where coefficients of equations match
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(13*px/500*cj0*cj2*htj1**2 - 269*px/100*cj0*cj2*htj1 - 13*px/500*cj0*cj2 + 269*px/200*cj0*sj2*htj1**2 + 13*px/250*cj0*sj2*htj1 - 269*px/200*cj0*sj2 - 1377*px/625*cj0*htj1 + 13*py/500*sj0*cj2*htj1**2 - 269*py/100*sj0*cj2*htj1 - 13*py/500*sj0*cj2 + 269*py/200*sj0*sj2*htj1**2 + 13*py/250*sj0*sj2*htj1 - 269*py/200*sj0*sj2 - 1377*py/625*sj0*htj1 + (269*pz/200 + 370413/500000)*cj2*htj1**2 + 13*pz/250*cj2*htj1 + (-269*pz/200 + 370413/500000)*cj2 + (-13*pz/500 - 17901/1250000)*sj2*htj1**2 + 269*pz/100*sj2*htj1 + (13*pz/500 - 17901/1250000)*sj2 + (px**2 + py**2 + pz**2 + 1377*pz/1250 + 75580589/100000000)*htj1**2, cj0, sj0, cj2, sj2, htj1, domain='QQ[px,py,pz]'), Poly(660521/100000000*htj1**2 - px**2 - py**2 - pz**2 + 1377*pz/1250 - 18730017/25000000, cj3, sj3, htj1, domain='QQ[px,py,pz]'))
+INFO: assuming equation htj1 is non-zero
+INFO: assuming equation htj1 is non-zero
+INFO: assuming equation htj1 is non-zero
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(r01*cj0 - r00*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[r00,r01]'), Poly(0, cj3, sj3, htj1, domain='ZZ'))
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(py*cj0 - px*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[px,py]'), Poly(589/10000, cj3, sj3, htj1, domain='QQ'))
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(-2*r00*cj0*cj2*htj1 + r00*cj0*sj2*htj1**2 - r00*cj0*sj2 - 2*r01*sj0*cj2*htj1 + r01*sj0*sj2*htj1**2 - r01*sj0*sj2 + r02*cj2*htj1**2 - r02*cj2 + 2*r02*sj2*htj1, cj0, sj0, cj2, sj2, htj1, domain='ZZ[r00,r01,r02]'), Poly(-cj3*htj1**2 - cj3, cj3, sj3, htj1, domain='ZZ'))
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(-r00*cj0*cj2*htj1**2 + r00*cj0*cj2 - 2*r00*cj0*sj2*htj1 - r01*sj0*cj2*htj1**2 + r01*sj0*cj2 - 2*r01*sj0*sj2*htj1 - 2*r02*cj2*htj1 + r02*sj2*htj1**2 - r02*sj2, cj0, sj0, cj2, sj2, htj1, domain='ZZ[r00,r01,r02]'), Poly(sj3*htj1**2 + sj3, cj3, sj3, htj1, domain='ZZ'))
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(-px*cj0*cj2*htj1**2 + px*cj0*cj2 - 2*px*cj0*sj2*htj1 - py*sj0*cj2*htj1**2 + py*sj0*cj2 - 2*py*sj0*sj2*htj1 - 2*pz*cj2*htj1 + (pz + 1377/2500)*sj2*htj1**2 + (-pz + 1377/2500)*sj2, cj0, sj0, cj2, sj2, htj1, domain='QQ[px,py,pz]'), Poly(-7/125*cj3*htj1**2 - 7/125*cj3 + 13/1000*htj1**2 + 13/1000, cj3, sj3, htj1, domain='QQ'))
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(-2*px*cj0*cj2*htj1 + px*cj0*sj2*htj1**2 - px*cj0*sj2 - 2*py*sj0*cj2*htj1 + py*sj0*sj2*htj1**2 - py*sj0*sj2 + (pz + 1377/2500)*cj2*htj1**2 + (-pz + 1377/2500)*cj2 + 2*pz*sj2*htj1, cj0, sj0, cj2, sj2, htj1, domain='QQ[px,py,pz]'), Poly(-7/125*sj3*htj1**2 - 7/125*sj3 - 269/400*htj1**2 - 269/400, cj3, sj3, htj1, domain='QQ'))
+INFO: not unique: [Poly(r01*cj0 - r00*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[r00,r01]'), Poly(0, cj3, sj3, htj1, domain='ZZ')]
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(r01*cj0 - r00*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[r00,r01]'), Poly(0, cj3, sj3, htj1, domain='ZZ'))
+INFO: not unique: [Poly(py*cj0 - px*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[px,py]'), Poly(589/10000, cj3, sj3, htj1, domain='QQ')]
+INFO: assuming equation htj1 is non-zero
+INFO: not unique: (Poly(py*cj0 - px*sj0, cj0, sj0, cj2, sj2, htj1, domain='ZZ[px,py]'), Poly(589/10000, cj3, sj3, htj1, domain='QQ'))
+WARNING: CannotSolveError: reduced equations are zero
+INFO: attempting kohli/osvatic general ik method
+WARNING: CannotSolveError: Kohli/Osvatic method requires 3 unknown variables
+INFO: attempting kohli/osvatic general ik method
+WARNING: CannotSolveError: need 8 or less equations of one variable, currently have 12
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_/ikfast.py", line 9203, in <module>
+    chaintree = solver.generateIkSolver(options.baselink,options.eelink,options.freeindices,solvefn=solvefn)
+  File "/usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_/ikfast.py", line 2257, in generateIkSolver
+    chaintree = solvefn(self, LinksRaw, jointvars, isolvejointvars)
+  File "/usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_/ikfast.py", line 2778, in solveFullIK_TranslationDirection5D
+    raise self.CannotSolveError('raghavan roth equations too complex')
+__main__.CannotSolveError: CannotSolveError: raghavan roth equations too complex
